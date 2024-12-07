@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - Coach en Entrepreneuriat</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <script src="js/script.js" defer></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-primary {
+            background-color: #8A2BE2; /* Violet clair */
+        }
+        .bg-j {
+            background-color: #FFD700; /* Jaune */
+        }
+        .text-accent {
+            color: #FFD700; /* Jaune moutarde */
+        }
+        .text-dark {
+            color: #000; /* Noir */
+        }
+        .hover-primary:hover {
+            color: #8A2BE2;
+        }
+    </style>
+</head>
+<body class="bg-gray-300 text-dark">
+
+<header class="bg-primary text-primary">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-6">
+        <h1 class="text-3xl text-accent font-bold">business</h1>
+        <!-- Menu Burger -->
+        <div class="relative">
+            <button id="burger-button" class="text-primary focus:outline-none">
+                <i class="fas fa-bars text-3xl"></i>
+            </button>
+            <nav id="burger-menu" class="hidden absolute right-0 mt-2 w-40 bg-j shadow-lg rounded-lg">
+                <a href="services.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Services</a>
+                <a href="index.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Acceuille</a>
+                <a href="contact.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Contact</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto pt-24 p-6">
+    <!-- Filtre Budget -->
+    <section id="filtre-budget" class="mb-6">
+        <h2 class="text-xl font-semibold text-dark">Filtrer par Budget :</h2>
+        <select id="budget-select" class="border p-2 mt-2" onchange="filterProducts()">
+            <option value="">Tous les Budgets</option>
+            <option value="30000fcfa">30,000 FCFA - Rose vif</option>
+            <option value="50000fcfa">50,000 FCFA - Bleu ciel</option>
+            <option value="100000fcfa">100,000 FCFA - Violet clair</option>
+        </select>
+    </section>
+
+    <!-- Liste des produits -->
+    <section id="produits-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></section>
+
+    <!-- Bouton IA -->
+    <div id="ia-button-container" class="mt-6 hidden">
+        <a href="ia.html" id="ia-button" class="bg-green-500 text-white px-4 py-2 rounded">
+            Voir Informations sur la Rentabilité
+        </a>
+    </div>
+</main>
+
+<footer class="bg-primary text-primary">
+    <div class="max-w-7xl mx-auto p-6 text-center">
+        <p>&copy; 2024 Coach. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script>
+    // Vérifiez que la déclaration ne se produit qu'une seule fois
+    const burgerButton = document.getElementById('burger-button');
+    const burgerMenu = document.getElementById('burger-menu');
+
+    burgerButton.addEventListener('click', () => {
+        burgerMenu.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>

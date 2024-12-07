@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coaching en entrepreneuriat et e-commerce par Barry Bello.">
+    <title>Bienvenue chez Barry Bello</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-primary {
+            background-color: #8A2BE2; /* Violet clair */
+        }
+        .bg-j {
+            background-color: #FFD700; /* Jaune */
+        }
+        .text-accent {
+            color: #FFD700; /* Jaune moutarde */
+        }
+        .text-dark {
+            color: #000; /* Noir */
+        }
+        .hover-primary:hover {
+            color: #8A2BE2;
+        }
+    </style>
+</head>
+<body class="bg-gray-300 text-dark">
+
+<header class="bg-primary text-primary">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-6">
+        <h1 class="text-3xl text-accent font-bold">
+ <a href="ia.html">Coach Barry</a>
+          </h1>
+        <!-- Menu Burger -->
+        <div class="relative">
+            <button id="burger-button" class="text-primary focus:outline-none">
+                <i class="fas fa-bars text-3xl"></i>
+            </button>
+            <nav id="burger-menu" class="hidden absolute right-0 mt-2 w-40 bg-j shadow-lg rounded-lg">
+                <a href="services.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Services</a>
+                <a href="produits.html" class="block px-4 py-2 text-dark hover:bg-gray-200">business</a>
+                <a href="contact.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Contact</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto p-6">
+    <!-- Section Présentation -->
+    <section id="presentation" class="bg-primary text-primary p-6 rounded-lg mb-12 shadow-lg">
+        <div class="flex items-center">
+            <img src="assets/20230110_154343_0000.png" alt="Photo du Coach" class="rounded-full w-24 h-24 mr-6 shadow-lg">
+            <div>
+                <h2 class="text-2xl font-semibold">Présentation du Coach</h2>
+                <p class="mt-2">Je suis <strong class="text-accent">Barry Bello</strong>, expert en entrepreneuriat et e-commerce avec plus de 10 ans d'expérience.</p>
+                <p class="mt-1">Ma passion est d'aider les entrepreneurs à transformer leurs idées en entreprises prospères.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="mb-12">
+        <h2 class="text-xl font-semibold text-dark mb-6">Nos Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-j p-6 shadow-lg rounded-lg hover:shadow-2xl transition">
+                <i class="fas fa-user-tie text-primary text-3xl mb-4"></i>
+                <h3 class="text-lg font-semibold">Coaching Personnalisé</h3>
+                <p class="mt-2 text-sm">Des séances adaptées à vos besoins spécifiques pour maximiser votre potentiel.</p>
+            </div>
+            <div class="bg-j p-6 shadow-lg rounded-lg hover:shadow-2xl transition">
+                <i class="fas fa-laptop text-primary text-3xl mb-4"></i>
+                <h3 class="text-lg font-semibold">Formation E-commerce</h3>
+                <p class="mt-2 text-sm">Apprenez les techniques essentielles pour réussir dans le commerce en ligne.</p>
+            </div>
+            <div class="bg-j p-6 shadow-lg rounded-lg hover:shadow-2xl transition">
+                <i class="fas fa-chart-line text-primary text-3xl mb-4"></i>
+                <h3 class="text-lg font-semibold">Consulting</h3>
+                <p class="mt-2 text-sm">Un accompagnement stratégique pour faire croître votre entreprise.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-primary text-primary">
+    <div class="max-w-7xl mx-auto p-6 text-center">
+        <p>&copy; 2024 Barry Bello. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script>
+    const burgerButton = document.getElementById('burger-button');
+    const burgerMenu = document.getElementById('burger-menu');
+
+    burgerButton.addEventListener('click', () => {
+        burgerMenu.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>

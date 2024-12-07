@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+      "budget": 30000,
+      "produits": [
+        {
+          "titre": "Bijoux Fantaisie",
+          "description": "Les bijoux fantaisie sont des incontournables du e-commerce, offrant des marges élevées et attirant une clientèle variée grâce à leur esthétique et leur accessibilité.",
+          "image": "assets/Bijoux_Fantaisie.webp"
+        },
+        {
+          "titre": "Lunettes de Soleil",
+          "description": "Les lunettes de soleil sont des produits tendance qui se vendent facilement, parfaits pour les saisons estivales et les promotions ciblées.",
+          "image": "assets/Lunettes_de_Soleil.jpg"
+        },
+        {
+          "titre": "Écouteurs",
+          "description": "Avec la demande croissante pour des accessoires technologiques, les écouteurs sans fil sont idéaux pour attirer les jeunes et les amateurs de gadgets.",
+          "image": "assets/Écouteurs_sans_fil.jpg"
+        }
+      ]
+    },
+    {
+      "budget": 50000,
+      "produits": [
+        {
+          "titre": "T-shirt",
+          "description": "Les T-shirts en coton sont des produits faciles à personnaliser et à vendre, idéaux pour créer une marque ou des collections uniques.",
+          "image": "assets/T-shirt confortable_en_coton.jpg"
+        },
+        {
+          "titre": "Robe",
+          "description": "Les robes élégantes attirent une clientèle féminine active, constituant un choix stratégique pour les ventes en ligne dans le secteur de la mode.",
+          "image": "assets/robe.jpg"
+        },
+        {
+          "titre": "Maquillage",
+          "description": "Les produits de maquillage sont très recherchés et parfaits pour fidéliser une clientèle grâce à des ventes régulières et des kits attractifs.",
+          "image": "assets/beauté.jpg"
+        }
+      ]
+    },
+    {
+      "budget": 100000,
+      "produits": [
+        {
+          "titre": "Smartphone",
+          "description": "Les smartphones, produits phares en technologie, attirent un large public et offrent un potentiel de bénéfices conséquent.",
+          "image": "assets/telephone.jpg"
+        },
+        {
+          "titre": "Montre Connectée",
+          "description": "Les montres connectées sont parfaites pour répondre à la demande croissante de gadgets intelligents et de bien-être.",
+          "image": "assets/montre.jpg"
+        },
+        {
+          "titre": "Équipements de Fitness",
+          "description": "Avec la montée de la tendance fitness, ces équipements répondent à un besoin croissant, assurant des ventes régulières et ciblées.",
+          "image": "assets/fitness.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails des services offerts par Barry Bello en coaching." />
+    <title>Services - Coach en Entrepreneuriat et E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-primary {
+            background-color: #8A2BE2; /* Violet clair */
+        }
+        .bg-j {
+            background-color: #FFD700; /* Jaune */
+        }
+        .text-accent {
+            color: #FFD700; /* Jaune moutarde */
+        }
+        .text-dark {
+            color: #000; /* Noir */
+        }
+        .hover-primary:hover {
+            color: #8A2BE2;
+        }
+    </style>
+</head>
+<body class="bg-gray-300 text-dark">
+
+<header class="bg-primary text-primary">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-6">
+        <h1 class="text-3xl text-accent font-bold">nos offre</h1>
+        <!-- Menu Burger -->
+        <div class="relative">
+            <button id="burger-button" class="text-primary focus:outline-none">
+                <i class="fas fa-bars text-3xl"></i>
+            </button>
+            <nav id="burger-menu" class="hidden absolute right-0 mt-2 w-40 bg-j shadow-lg rounded-lg">
+                <a href="index.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Acceuille</a>
+                <a href="produits.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Produits</a>
+                <a href="contact.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Contact</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto p-6">
+    <!-- Section Coaching Individuel -->
+    <section class="mb-12 bg-j p-6 rounded-lg shadow-lg">
+        <h2 class="text-xl font-semibold">Coaching Individuel</h2>
+        <p>Le Coaching Individuel est un accompagnement personnalisé qui vise à aider chaque entrepreneur à atteindre ses objectifs spécifiques. Nous travaillerons ensemble pour identifier vos forces et vos faiblesses, établir un plan d'action clair, et surmonter les obstacles qui se dressent sur votre chemin.</p>
+        <p>Ce format est idéal pour ceux qui recherchent une attention particulière et un suivi régulier dans leur parcours entrepreneurial.</p>
+        <a href="https://wa.me/+242065835337?text=Je%20souhaite%20réserver%20un%20coaching%20individuel." target="_blank" class="mt-4 inline-block bg-green-500 text-white px-4 py-2 rounded">Réserver sur WhatsApp</a>
+    </section>
+
+    <!-- Section Coaching en Groupe -->
+    <section class="mb-12 bg-j p-6 rounded-lg shadow-lg">
+        <h2 class="text-xl font-semibold">Coaching en Groupe</h2>
+        <p>Le Coaching en Groupe favorise l'échange d'idées et le soutien mutuel entre entrepreneurs. En partageant vos expériences avec d'autres, vous pouvez apprendre des stratégies éprouvées et bénéficier de perspectives différentes.</p>
+        <p>Ce format encourage la collaboration et crée un environnement motivant où chacun peut progresser ensemble.</p>
+        <a href="https://wa.me/+242065835337?text=Je%20souhaite%20réserver%20un%20coaching%20en%20groupe." target="_blank" class="mt-4 inline-block bg-green-500 text-white px-4 py-2 rounded">Réserver sur WhatsApp</a>
+    </section>
+
+    <!-- Section Coaching en Ligne -->
+    <section class="mb-12 bg-j p-6 rounded-lg shadow-lg">
+        <h2 class="text-xl font-semibold">Coaching en Ligne</h2>
+        <p>Le Coaching en Ligne offre la flexibilité nécessaire pour s'adapter à votre emploi du temps chargé. Grâce à des outils numériques, nous pouvons organiser des sessions interactives où que vous soyez.</p>
+        <p>C'est une excellente option pour ceux qui souhaitent bénéficier de conseils professionnels tout en gérant leurs responsabilités personnelles ou professionnelles.</p>
+        <a href="https://wa.me/+242065835337?text=Je%20souhaite%20réserver%20un%20coaching%20en%20ligne." target="_blank" class="mt-4 inline-block bg-green-500 text-white px-4 py-2 rounded">Réserver sur WhatsApp</a>
+    </section>
+</main>
+
+<footer class="bg-primary text-primary">
+    <div class="max-w-7xl mx-auto p-6 text-center">
+        <p>&copy; 2024 Barry Bello. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script>
+    const burgerButton = document.getElementById('burger-button');
+    const burgerMenu = document.getElementById('burger-menu');
+
+    burgerButton.addEventListener('click', () => {
+        burgerMenu.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>
