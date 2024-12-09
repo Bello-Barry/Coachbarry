@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produits - Coach en Entrepreneuriat</title>
+    <title>Coaching Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="js/script.js" defer></script>
-     <style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: #f3f4f6; /* Couleur de fond */
         }
         .bg-primary {
             background-color: #8A2BE2; /* Violet clair */
@@ -25,13 +26,100 @@
         .hover-primary:hover {
             color: #8A2BE2;
         }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .card ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card ul li span {
+            font-size: 1.2em;
+        }
+        .card button {
+            background-color: #4CAF50; /* Couleur du bouton */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .card button:hover {
+            background-color: #45a049;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .grid-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .grid-item h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .grid-item p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .grid-item ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .grid-item ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .grid-item ul li span {
+            font-size: 1.2em;
+        }
+        .grid-item button {
+            background-color: #4CAF50; /* Couleur du bouton */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .grid-item button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
-<body class="bg-gray-300">
+<body class="bg-gray-100 text-dark">
 
 <header class="bg-primary text-primary">
     <div class="max-w-7xl mx-auto flex items-center justify-between p-6">
-        <h1 class="text-3xl text-accent font-bold">e-commerce</h1>
+        <h1 class="text-3xl text-accent font-bold">Coach Barry</h1>
         <!-- Menu Burger -->
         <div class="relative">
             <button id="burger-button" class="text-primary focus:outline-none">
@@ -39,40 +127,105 @@
             </button>
             <nav id="burger-menu" class="hidden absolute right-0 mt-2 w-40 bg-j shadow-lg rounded-lg">
                 <a href="services.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Services</a>
-                <a href="produits.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Produits</a>
+                <a href="produits.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Business</a>
                 <a href="contact.html" class="block px-4 py-2 text-dark hover:bg-gray-200">Contact</a>
             </nav>
         </div>
     </div>
 </header>
 
-<main class="pt-24 p-6">
-    <!-- Filtre Budget -->
-    <section id="filtre-budget" class="mb-6">
-        <h2 class="text-xl font-semibold">Filtrer par Budget :</h2>
-        <select id="budget-select" class="border p-2 mt-2" onchange="filterProducts()">
-            <option value="">Tous les Budgets</option>
-            <option value="30000fcfa">30,000 FCFA - Rose vif</option>
-            <option value="50000fcfa">50,000 FCFA - Bleu ciel</option>
-            <option value="100000fcfa">100,000 FCFA - Violet clair</option>
-        </select>
-    </section>
+<main class="max-w-7xl mx-auto p-4">
+    <!-- Bannière de conversion -->
+    <div class="mb-8 bg-green-100 p-4 rounded">
+        <p>🎯 Offre limitée : -20% sur tous nos programmes de coaching ce mois-ci !</p>
+    </div>
 
-    <!-- Liste des produits -->
-    <section id="produits-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></section>
+    <!-- Plans de pricing -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-blue-100 hover:shadow-lg transition-shadow p-4 rounded">
+            <h2 class="font-bold">Débutant</h2>
+            <div class="text-2xl font-bold">25,000 FCFA</div>
+            <ul class="space-y-2 mt-2">
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> 2 sessions de coaching/mois</li>
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> Accès aux ressources de base</li>
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> Support par email</li>
+            </ul>
+            <button onclick="setSelectedPlan({title: 'Débutant', price: 25000, features: ['2 sessions de coaching/mois', 'Accès aux ressources de base', 'Support par email']})" class="w-full mt-4 bg-blue-600 text-white p-2 rounded hover:bg-opacity-90">Commencer maintenant</button>
+        </div>
 
-    <!-- Bouton IA -->
-    <div id="ia-button-container" class="mt-6 hidden">
-        <a href="ia.html" id="ia-button" class="bg-green-500 text-white px-4 py-2 rounded">
-            Voir Informations sur la Rentabilité
-        </a>
+        <div class="bg-purple-100 hover:shadow-lg transition-shadow p-4 rounded">
+            <h2 class="font-bold">Business</h2>
+            <div class="text-2xl font-bold">75,000 FCFA</div>
+            <ul class="space-y-2 mt-2">
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> 4 sessions de coaching/mois</li>
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> Un siteweb e-commerce statistique</li>
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> Ressources premium</li>
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> Support prioritaire</li>
+            </ul>
+            <button onclick="setSelectedPlan({title: 'Business', price: 75000, features: ['4 sessions de coaching/mois', 'Un siteweb e-commerce statistique', 'Ressources premium', 'Support prioritaire']})" class="w-full mt-4 bg-purple-600 text-white p-2 rounded hover:bg-opacity-90">Commencer maintenant</button>
+        </div>
+
+        <div class="bg-yellow-100 hover:shadow-lg transition-shadow p-4 rounded">
+            <h2 class="font-bold">VIP</h2>
+            <div class="text-2xl font-bold">120,000 FCFA</div>
+            <ul class="space-y-2 mt-2">
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> Sessions illimitées</li>
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> Mentorat personnalisé</li>
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> Accès à tous les contenus</li>
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> Support 24/7</li>
+                <li class="flex items-center gap-2"><span class="material-icons">lock</span> Stratégie sur mesure avec un siteweb dynamique</li>
+            </ul>
+            <button onclick="setSelectedPlan({title: 'VIP', price: 120000, features: ['Sessions illimitées', 'Mentorat personnalisé', 'Accès à tous les contenus', 'Support 24/7', 'Stratégie sur mesure avec un siteweb dynamique']})" class="w-full mt-4 bg-yellow-600 text-white p-2 rounded hover:bg-opacity-90">Commencer maintenant</button>
+        </div>
+    </div>
+
+    <!-- Fonctionnalités premium -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-blue-50 p-4 rounded">
+            <span class="material-icons w-8 h-8 mb-2">calendar_today</span>
+            <h3 class="font-bold mb-2">Calendrier intégré</h3>
+            <p>Réservez vos sessions en quelques clics.</p>
+        </div>
+
+        <div class="bg-purple-50 p-4 rounded">
+            <span class="material-icons w-8 h-8 mb-2">person_outline</span>
+            <h3 class="font-bold mb-2">Espace membre</h3>
+            <p>Accédez à vos ressources exclusives.</p>
+        </div>
+
+        <div class="bg-yellow-50 p-4 rounded">
+            <span class="material-icons w-8 h-8 mb-2">book_open</span>
+            <h3 class="font-bold mb-2">Formation continue</h3>
+            <p>Bibliothèque de cours mise à jour.</p>
+        </div>
+
+        <div class="bg-green-50 p-4 rounded">
+            <span class="material-icons w-8 h-8 mb-2">video_call</span>
+            <h3 class="font-bold mb-2">Webinaires live</h3>
+            <p>Sessions de Q&R hebdomadaires.</p>
+        </div>
     </div>
 </main>
 
-<footer class="bg-primary text-white p-4 text-center">
-    &copy; 2024 Coach. Tous droits réservés.
+<footer class="bg-primary text-primary">
+    <div class="max-w-7xl mx-auto p-6 text-center">
+        <p>&copy; 2024 Barry Bello. Tous droits réservés.</p>
+    </div>
 </footer>
 
+<script>
+    let selectedPlan = null;
+    const phoneNumber = '+242065835337'; // Remplacez par votre numéro au format international
 
+    function setSelectedPlan(plan) {
+        selectedPlan = plan;
+        const jsonPlan = JSON.stringify(plan);
+        const whatsappMessage = `Voici votre plan sélectionné : ${jsonPlan}`;
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        // Ouvrir WhatsApp avec le message pré-rempli
+        window.open(whatsappUrl, '_blank');
+    }
+</script>
 </body>
 </html>
